@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         // opacity:'100%',
         height: 56,
-        width: '100%',
+        width: '83%',
         justifyContent: 'center',
     },
     buttonText: {

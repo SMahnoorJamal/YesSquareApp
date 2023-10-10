@@ -12,13 +12,11 @@ const images = [
 
 const { width: screenWidth } = Dimensions.get('window')
 
-export default class MyCarousel extends React.Component {
-
+export default class Carousal extends React.Component {
   
   render() {
     return (
-      <Carousel
-      style={{width: '100%'}}>
+      <Carousel>
         {images.map(item => {
           return (
             <View style={styles.item} key={item}>
