@@ -1,4 +1,4 @@
-import { Image, View, Text } from 'react-native'
+import { Image, View, Text, ScrollView } from 'react-native'
 import React, { Component } from "react";
 import { ManInCoat1 } from '../../Images';
 import Button from '../Button';
@@ -21,21 +21,22 @@ componentDidMount =() => {
         console.log("hgh", this.props.places)
         return (
 
-            <View>
+            <ScrollView>
 
                 <View style={{ flexDirection: 'row', marginTop: '3%' }}>
 
-                    
-                    <Image style={styles.imageStyle} source={ManInCoat1}>
-                    </Image>
-                    <View style={{ justifyContent: 'center', marginTop: '-12%' }}>
-                            <View style={{ backgroundColor: 'red', padding: 20}}>
+             
+                    <View style={{ justifyContent: 'center', marginTop: '-17%' }}>
+                            <View style={{ padding: 20}}>
 
                 
                             {this.state.data ? this.state.data.map(item => {
                              return(
+                                    // <View></View>   
+                    // <Image style={styles.imageStyle} source={ManInCoat1}>
+                    // </Image>
                           <Text
-                             style={{fontSize: 19,color: 'green'}}>
+                             style={{fontSize: 19,marginLeft: -15,color: 'black'}}>
                                 {item}</Text> 
                                )}): null}
                             </View>
@@ -45,7 +46,10 @@ componentDidMount =() => {
                         <Button style={{
                             padding: 17,
                             backgroundColor: 'grey',
-                            borderRadius: 10
+                            borderRadius: 10,
+                            padding: 17,
+                            // width: 20
+
                         }}
                             textStyle={styles.textStyle}
                             text='L'></Button>
@@ -57,12 +61,17 @@ componentDidMount =() => {
                             backgroundColor: 'grey' 
                         }}
                             textStyle={styles.textStyle}
-                            text='XL'></Button>
+                            text='1'></Button>
+
+
                     </View>
+         
+                    {/* <View style={{width: '100%', marginTop: 9, backgroundColor: 'grey', height: 1}}></View>   
+    */}
                 </View> 
-                <Line></Line>
-                             
-            </View>   )
+            
+               
+            </ScrollView>   )
     }
 }
 

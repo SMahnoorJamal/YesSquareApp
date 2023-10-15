@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import { PersistGate } from 'redux-persist/integration/react'
 import {store, persistor} from './src/store';
 import { Provider } from 'react-redux';
-import CartBox from './src/components/CartBox';
+import Cart from './src/classes/Cart';
 import { ManInCoat1 } from './src/Images';
 import { connect } from 'react-redux';
 import { addPlace } from './src/actions/place';
@@ -24,6 +24,10 @@ const data1 =
     {
       image: ManInCoat1,
       price: 3
+    },
+    {
+      image: ManInCoat1,
+      price: 4
     }
   ]
 const App = () => {
@@ -35,7 +39,8 @@ const App = () => {
           return( <CartBox data={data1}></CartBox>
            )
         })} */}
-<DetailsScreen/>
+        <Cart/>
+{/* <DetailsScreen/> */}
       {/* <MyTodo/> */}
     </PersistGate>
     </Provider>
