@@ -2,7 +2,7 @@
 import { ADD_PLACE } from '../actions/types';
 const initialState = {
   placeName: '',
-  places: ['data1', 98798]
+  places: ['Yoruba boys', '34,098 NGN']
 };
 const placeReducer = (state = initialState, action) => {
   console.log(" iyui", action, state.places)

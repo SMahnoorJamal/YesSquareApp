@@ -10,6 +10,7 @@ import { addPlace } from './src/actions/place';
 import { DetailsComp } from './src/components/DetailsComp';
 import Carousal from './src/components/Carousal';
 import DetailsScreen from './src/classes/DetailsScreen';
+import ShippingScreen from './src/classes/ShippingScreen';
 
 const data1 =
   [
@@ -39,7 +40,7 @@ const App = () => {
           return( <CartBox data={data1}></CartBox>
            )
         })} */}
-        <Cart/>
+        <ShippingScreen/>
 {/* <DetailsScreen/> */}
       {/* <MyTodo/> */}
     </PersistGate>

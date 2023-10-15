@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
         // position: 'relative',
         backgroundColor: 'white',
         width: '84%',
+        
         // justifyContent: "center",
         // paddingVertical: 7,
         marginLeft: 8

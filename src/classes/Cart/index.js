@@ -9,7 +9,7 @@ import {
 import { BoxL } from '../../components/BoxL';
 import { BorderComp } from '../../components/BorderComp';
 import CartBox from '../../components/CartBox';
-import { ManInCoat1 } from '../../Images';
+import { ManInCoat1, Photo3 } from '../../Images';
 import Button from '../../components/Button';
 const data1 =
     [
@@ -22,6 +22,10 @@ const data1 =
             price: 2
         },
         {
+            image: Photo3,
+            price: 3
+        },
+          {
             image: ManInCoat1,
             price: 3
         }
@@ -31,11 +35,21 @@ function Cart() {
         <ScrollView style={{ backgroundColor: 'white' }}>
 
             {data1.map(item => {
-                return (<CartBox data={data1}></CartBox>
+                return (
+                
+                    <View>
+                    <CartBox data={data1}></CartBox>
+                    <View style={{width: '100%', marginTop: 9, backgroundColor: 'grey', height: 1}}></View>   
+   
+                    </View>
                 )
+                
             })}
-            <View style={{ marginTop: 20,marginLeft: 38, width: '100%' }}>
-              <View style={{borderRadius: 15 , padding: 30, width: '85%', backgroundColor: '#F4F4F4'}}>
+
+<View style={{width: '100%', backgroundColor: 'grey', height: 2}}></View>   
+
+            <View style={{ marginTop: 20,marginLeft: 38, width: '100%', justifyContent: 'center'}}>
+              <View style={{flexDirection: 'row',borderRadius: 15 , justifyContent: 'space-between', padding: 30, width: '83%', backgroundColor: '#F4F4F4'}}>
                 <Text>Total Price</Text>
                 <Text>68,148 NGN</Text>
               </View>
